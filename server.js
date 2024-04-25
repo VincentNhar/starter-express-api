@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require("mongoose");
 
-// // Routers
-// const mapRouter = require("./routes/MapRouter");
+// Routers
+const mapRouter = require("./routes/MapRouter");
 
 // Create an Express application
 const app = express();
@@ -17,8 +17,8 @@ app.use(express.json({ limit: '10mb' }));
 // Middleware to parse URL-encoded bodies in incoming requests
 app.use(express.urlencoded());
 
-// // Routes
-// app.use("/",mapRouter);
+// Routes
+app.use("/",mapRouter);
 
 // Define a port for the server to listen on
 const PORT = process.env.PORT || 5000
